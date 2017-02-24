@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>正则表达式之入门</title>
+</head>
+
+<body>
+
+    <label>输入需检测的手机号：<input id="phone-input" type="text"></label>
+    <button id="button">确认填写</button>
+
+    <div>您的检测结果：<span id="phone-display">尚无结果</span></div>
+
+    <script type="text/javascript">
+        (function() {
+            /*oo
+            在注释下方写下代码
+            给按钮button绑定一个点击事件
+            在事件处理函数中
+            获取aqi-input输入的值，并显示在aqi-display中
+            */
+            var zh_cn = [
+                "请输入需要检测的手机号",
+                "请输入正确格式的手机号",
+                "您输入的手机号为空号",
+                "输入正确谢谢合作"
+            ]
+            var displayVal = document.getElementById("phone-display");
+
+            button.onclick = function() {
+                if (!inputVal) {
+                    displayVal.innerHTML = zh_cn[0];
+                } else {
+                    displayVal.innerHTML = zh_cn[3];
+                }
+            }
+
+        })();
+    </script>
+</body>
+
+</html>
